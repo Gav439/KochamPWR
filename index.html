@@ -1,160 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<style>
-		body {
-			background-color: black;
-			color: white;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			height: 100vh;
-			margin: 0;
-		}
-
-		input, button {
-			margin: 10px;
-			padding: 10px;
-			font-size: 16px;
-		}
-	</style>
+	<link rel="stylesheet" href="index.css">
 	<title>Kocham Piotra Patronika</title>
 </head>
 
 <body>
-	<script>
-		function mod(n, m) {
- 			return ((n % m) + m) % m;
-		}
-		const Wyklad = {
-			1: 4,
-			11: 18,
-			26: 15,
-			27: 19,
-			28: 18,
-			30: 0,
-			31: 8,
-			32: 14,
-			33: 14,
-			34: 16,
-			35: 9,
-			36: 5,
-			37: 17,
-			38: 15,
-			39: 8,
-			40: 3,
-			41: 2,
-			42: 15,
-			44: 17,
-			45: 15,
-			46: 20,
-			47: 19,
-			48: 6,
-			49: 20,
-			50: 19,
-			51: 12,
-			53: 12,
-			54: 2,
-			55: 3,
-			56: 4,
-			57: 13,
-			58: 16,
-			59: 14,
-			60: 17,
-			61: 10,
-			63: 1,
-			64: 8,
-			66: 17,
-			68: 17,
-			72: 1,
-			74: 5,
-			75: 18,
-			77: 12,
-			79: 13,
-			80: 20,
-			89: 1,
-			96: 8,
-			121: 4,
-		}
-		const Cwiczenia = {
-			0: 8,
-			1: 0,
-			2: 16,
-			3: 14,
-			4: 16,
-			5: 18,
-			6: 15,
-			8: 20,
-			9: 20,
-			10: 16,
-			11: 3,
-			12: 1,
-			14: 6,
-			15: 4,
-			16: 7,
-			17: 7,
-			18: 2,
-			19: 9,
-			20: 19,
-			21: 4,
-			23: 16,
-			24: 3,
-			25: 11,
-			26: 5,
-			27: 20,
-			28: 10,
-			29: 5,
-			30: 0,
-			31: 16,
-			33: 1,
-			36: 17,
-			38: 13,
-			42: 13,
-			44: 3,
-			45: 17,
-			54: 14,
-			73: 4,
-			92: 14,
-			117: 9,
-			129: 12,
-			131: 19,
-			132: 4,
-			172: 5,
-			178: 12,
-			183: 15,
-			184: 7,
-			185: 3,
-			186: 5,
-		}
-		myFunction = () => {
-			const index = Number(document.getElementById("Index").value);
-			const wk = mod(index, 122);
-			const cw = mod(index, 187);
-			const wyklad = Wyklad[wk];
-			const cwiczenia = Cwiczenia[cw];
-			let punkty_wyklad = 0;
-			let punkty_cwiczenia = 0;
-			while ((index + punkty_wyklad) % 21 != wyklad && wyklad != undefined) {
-				punkty_wyklad++;
-			}
-			while ((index + punkty_cwiczenia) % 21 != cwiczenia && cwiczenia != undefined) {
-				punkty_cwiczenia++;
-			}
-			document.getElementById("demo").innerHTML = `Wyklad: ${punkty_wyklad}, Cwiczenia: ${punkty_cwiczenia}`;
-			const prog = 8;
-			const wykladStatus = punkty_wyklad >= prog ? "zdane" : "nie zdane";
-			const cwiczeniaStatus = punkty_cwiczenia >= prog ? "zdane" : "nie zdane";
-			document.getElementById("demo").innerHTML += `<br>Wyklad: ${wykladStatus}, Cwiczenia: ${cwiczeniaStatus}`;
-		}
-	</script>
+	<p id="termin">Terminy:</p>
+	<a href="termin0.html">Termin 0</a>
 </body>
-<a href="index2.html">Gorbino's Quest of Life</a>
-<input type="number" id="Index" placeholder="Index">
-<button onclick="myFunction()">Click me</button>
-<p id="demo"></p>
 
 </html>
