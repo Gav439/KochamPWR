@@ -7,7 +7,7 @@ function getPoints(index, table, mod_const, max_points) {
 
 	const result = table[solution];
 	let points = 0;
-	while ((index + result) % max_points != result && result != undefined) {
+	while ((index + points) % max_points != result && result != undefined) {
 		points++;
 	}
 	return points;
