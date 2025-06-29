@@ -16,6 +16,12 @@ function getPoints(index, table, mod_const, max_points) {
 function result(wyniki, mod_const, max_points, prog) {
 	const index = Number(document.getElementById("index").value);
 	let points = getPoints(index, wyniki, mod_const, max_points);
-	const status = points >= prog ? "<div id=\"zdane\"> zdane </div>" : "<div id=\"uwalone\"> nie zdane </div>";
+	let status;
+	if (points > prog)
+		status = "<div id=\"zdane\"> zdane </div>";
+	else if (points == prog)
+		status = "<div id=\"zdane\"> Zdane??? </div>";
+	else
+		status = "<div id=\"uwalone\"> nie zdane </div>";
 	document.getElementById("wyniki").innerHTML = `Kolos: ${points} <br> ${status}`;
 }
