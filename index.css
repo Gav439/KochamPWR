@@ -1,3 +1,23 @@
+@keyframes czekamy-move {
+	0% {
+		left: 100vw;
+	}
+
+	100% {
+		left: -100vw;
+	}
+}
+
+#czekamy {
+	position: fixed;
+	top: 0;
+	width: 100vw;
+	font-size: 4em;
+	white-space: nowrap;
+	pointer-events: none;
+	animation: czekamy-move 6s linear infinite;
+}
+
 body {
 	font-size: auto;
 	background-color: black;
@@ -9,9 +29,9 @@ body {
 	height: 100vh;
 	min-width: auto;
 	margin: 0;
-
+	overflow-x: clip;
+	overflow-y: auto;
 }
-
 
 p {
 	text-wrap: wrap;
